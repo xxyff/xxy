@@ -1,0 +1,112 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: zsqzsq zsq, zsq, LIC=KIVCX-HSI7E-22DL4-FP1P1-RR77K-1LXBR
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
+Toolchain Path:  E:\Software\keil51\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DARMSTM.DLL V1.65.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TARMSTM.DLL V1.64.0.0
+ 
+<h2>Project:</h2>
+F:\工作\2020\接线盒\ALIENTEK MINISTM32 实验15 ADC实验\USER\ADC.uvprojx
+Project File Date:  03/31/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling adc.c...
+compiling smg.c...
+..\HARDWARE\SMG\smg.h(13): error:  #20: identifier "uint8" is undefined
+  void hc595_write_byte(uint8 t byte);
+..\HARDWARE\SMG\smg.h(13): error:  #18: expected a ")"
+  void hc595_write_byte(uint8 t byte);
+..\HARDWARE\SMG\smg.h(15): error:  #20: identifier "uint8" is undefined
+  void hc595_display(uint8 t data[]);
+..\HARDWARE\SMG\smg.h(15): error:  #18: expected a ")"
+  void hc595_display(uint8 t data[]);
+..\HARDWARE\SMG\smg.c(3): error:  #20: identifier "uint8_t" is undefined
+  uint8_t seg_table_p[]={0xfc,0x60,0xda,0xf2,0x66,0xb6,0xbe,0xe0,0xfe,0xf6};
+..\HARDWARE\SMG\smg.c(4): error:  #20: identifier "uint8_t" is undefined
+  uint8_t seg_table_n[]={0x03,0x9F,0x25,0x0D,0x99,0x49,0x41,0x1F,0x01,0x09};
+..\HARDWARE\SMG\smg.c(8): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+        GPIO_InitTypeDef GPIO_InitStructure;
+..\HARDWARE\SMG\smg.c(9): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+..\HARDWARE\SMG\smg.c(9): error:  #20: identifier "RCC_APB2Periph_GPIOD" is undefined
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+..\HARDWARE\SMG\smg.c(9): error:  #20: identifier "ENABLE" is undefined
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+..\HARDWARE\SMG\smg.c(11): error:  #20: identifier "GPIO_Pin_12" is undefined
+        GPIO_InitStructure.GPIO_Pin = HC595_DATA;
+..\HARDWARE\SMG\smg.c(12): error:  #20: identifier "GPIO_Speed_2MHz" is undefined
+        GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+..\HARDWARE\SMG\smg.c(13): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+        GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+..\HARDWARE\SMG\smg.c(14): warning:  #223-D: function "GPIO_Init" declared implicitly
+        GPIO_Init(HC595_PORT, &GPIO_InitStructure);
+..\HARDWARE\SMG\smg.c(14): error:  #20: identifier "GPIOD" is undefined
+        GPIO_Init(HC595_PORT, &GPIO_InitStructure);
+..\HARDWARE\SMG\smg.c(16): error:  #20: identifier "GPIO_Pin_10" is undefined
+        GPIO_InitStructure.GPIO_Pin = HC595_SCLK;
+..\HARDWARE\SMG\smg.c(21): error:  #20: identifier "GPIO_Pin_8" is undefined
+        GPIO_InitStructure.GPIO_Pin = HC595_RCLK;
+..\HARDWARE\SMG\smg.c(26): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+        GPIO_ResetBits(HC595_PORT, HC595_DATA);
+..\HARDWARE\SMG\smg.c(32): error:  #20: identifier "uint8_t" is undefined
+  void hc595_write_byte(uint8_t byte)
+..\HARDWARE\SMG\smg.c(34): error:  #20: identifier "uint8_t" is undefined
+        uint8_t i, num;
+..\HARDWARE\SMG\smg.c(38): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+                GPIO_ResetBits(HC595_PORT, HC595_SCLK);
+..\HARDWARE\SMG\smg.c(38): error:  #20: identifier "GPIOD" is undefined
+                GPIO_ResetBits(HC595_PORT, HC595_SCLK);
+..\HARDWARE\SMG\smg.c(38): error:  #20: identifier "GPIO_Pin_10" is undefined
+                GPIO_ResetBits(HC595_PORT, HC595_SCLK);
+..\HARDWARE\SMG\smg.c(40): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+                        GPIO_SetBits(HC595_PORT, HC595_DATA);
+..\HARDWARE\SMG\smg.c(40): error:  #20: identifier "GPIO_Pin_12" is undefined
+                        GPIO_SetBits(HC595_PORT, HC595_DATA);
+..\HARDWARE\SMG\smg.c(50): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+        GPIO_ResetBits(HC595_PORT, HC595_RCLK);
+..\HARDWARE\SMG\smg.c(50): error:  #20: identifier "GPIOD" is undefined
+        GPIO_ResetBits(HC595_PORT, HC595_RCLK);
+..\HARDWARE\SMG\smg.c(50): error:  #20: identifier "GPIO_Pin_8" is undefined
+        GPIO_ResetBits(HC595_PORT, HC595_RCLK);
+..\HARDWARE\SMG\smg.c(51): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+        GPIO_SetBits(HC595_PORT, HC595_RCLK);
+..\HARDWARE\SMG\smg.c(55): error:  #20: identifier "uint8_t" is undefined
+  void hc595_display(uint8_t data[])
+..\HARDWARE\SMG\smg.c(60): warning:  #223-D: function "Delay" declared implicitly
+    Delay(10);
+..\HARDWARE\SMG\smg.c(89): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\SMG\smg.c: 9 warnings, 23 errors
+compiling delay.c...
+..\SYSTEM\delay\delay.c(61): warning:  #1-D: last line of file ends without a newline
+  }
+..\SYSTEM\delay\delay.c: 1 warning, 0 errors
+"..\OBJ\ADC.axf" - 23 Error(s), 10 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  F:\工作\2020\接线盒\ALIENTEK MINISTM32 实验15 ADC实验\USER\RTE
+  E:\Software\keil51\UV4\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>
